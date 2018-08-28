@@ -745,7 +745,7 @@
                         return reject(new Error('The value returned in the state parameter does not match the state value from your original ' +
                             'authorization code request.'));
                     }
-                    resolve(_this.exchangeForToken(oauth, userData));
+                    resolve({"oauthData":oauth, "userData": userData});
                 }).catch(function (error) { return reject(error); });
             });
         };
