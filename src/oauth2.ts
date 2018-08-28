@@ -94,7 +94,7 @@ export default class OAuth2 {
           ));
         }
 
-        resolve(this.exchangeForToken(oauth, userData));
+        resolve({"oauthData":oauth, "userData": userData});
       }).catch(error => reject(error));
     });
   }
